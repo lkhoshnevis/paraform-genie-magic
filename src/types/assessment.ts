@@ -41,6 +41,17 @@ export const PAIN_OPTIONS = [
   'Job boards - too much sifting'
 ];
 
+export const PAIN_DESCRIPTIONS: Record<string, string> = {
+  'Long hiring periods': 'Hiring drags on for weeks or months',
+  'Finding skill fit': 'Hard to find candidates with right technical skills',
+  'Finding culture fit': 'Candidates don\'t match company culture and values',
+  'Recruiters - quality of prospects': 'Getting too many unqualified candidates',
+  'Too much manual work': 'Spending too much time on sourcing and screening',
+  'Recruiters - too much oversight needed': 'Having to constantly manage recruiters',
+  'Recruiters - too expensive': 'Recruiting costs are too high for budget',
+  'Job boards - too much sifting': 'Drowning in resumes from job postings'
+};
+
 export const ROLE_TESTIMONIALS: Record<string, RoleTestimonial[]> = {
   'C-Suite': [
     {

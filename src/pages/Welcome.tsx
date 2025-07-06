@@ -9,13 +9,13 @@ interface WelcomeProps {
 
 export const Welcome = ({ onStart }: WelcomeProps) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4">
       <div className="max-w-4xl w-full text-center">
         <div className="mb-8">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">
             Paraform Genie
           </h1>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 rounded-full text-sm font-medium text-yellow-800 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full text-sm font-medium text-orange-800 mb-6">
             <Sparkles className="w-4 h-4" />
             Demos take too long
           </div>
@@ -25,7 +25,7 @@ export const Welcome = ({ onStart }: WelcomeProps) => {
           Answer a few quick questions about your startup's hiring needs
         </h2>
         <p className="text-xl text-gray-600 mb-8">
-          We'll provide you with your <span className="font-semibold text-blue-600">Personalized Hiring Strategy</span>
+          We'll provide you with your <span className="font-semibold text-black">Personalized Hiring Strategy</span>
         </p>
 
         <div className="flex justify-center items-center gap-6 mb-8 text-sm text-gray-500">
@@ -42,7 +42,7 @@ export const Welcome = ({ onStart }: WelcomeProps) => {
         <Button 
           onClick={onStart}
           size="lg"
-          className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+          className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200"
         >
           Start Your AI Consultation
         </Button>

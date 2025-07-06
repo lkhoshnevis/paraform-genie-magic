@@ -57,6 +57,20 @@ const Index = () => {
     window.open('https://www.paraform.com/get-a-demo', '_blank');
   };
 
+  const handleBack = () => {
+    switch (currentStep) {
+      case 'roles':
+        setCurrentStep('welcome');
+        break;
+      case 'pains':
+        setCurrentStep('roles');
+        break;
+      case 'results':
+        setCurrentStep('pains');
+        break;
+    }
+  };
+
   const renderCurrentStep = () => {
     switch (currentStep) {
       case 'welcome':
@@ -67,6 +81,7 @@ const Index = () => {
             selectedRoles={selectedRoles}
             onRoleToggle={handleRoleToggle}
             onNext={() => setCurrentStep('pains')}
+            onBack={handleBack}
           />
         );
       case 'pains':
@@ -75,6 +90,7 @@ const Index = () => {
             selectedPains={selectedPains}
             onPainToggle={handlePainToggle}
             onNext={handleShowResults}
+            onBack={handleBack}
           />
         );
       case 'results':
@@ -83,6 +99,7 @@ const Index = () => {
             selectedRoles={selectedRoles}
             selectedPains={selectedPains}
             onDemoClick={handleDemoClick}
+            onBack={handleBack}
           />
         );
       default:
