@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ProgressBar } from '@/components/ProgressBar';
 import { SelectionButton } from '@/components/SelectionButton';
-import { PAIN_OPTIONS, PAIN_DESCRIPTIONS } from '@/types/assessment';
+import { PAIN_OPTIONS } from '@/types/assessment';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 
 interface PainSelectionProps {
@@ -32,18 +32,14 @@ export const PainSelection = ({ selectedPains, onPainToggle, onNext, onBack }: P
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {PAIN_OPTIONS.map((pain) => (
-              <div key={pain} className="space-y-2">
-                <SelectionButton
-                  selected={selectedPains.includes(pain)}
-                  onClick={() => onPainToggle(pain)}
-                  className="w-full text-left bg-gray-50 hover:bg-gray-100 border-gray-200 p-4"
-                >
-                  <div className="font-medium text-gray-900">{pain}</div>
-                  <div className="text-sm text-gray-500 mt-1">
-                    {PAIN_DESCRIPTIONS[pain]}
-                  </div>
-                </SelectionButton>
-              </div>
+              <SelectionButton
+                key={pain}
+                selected={selectedPains.includes(pain)}
+                onClick={() => onPainToggle(pain)}
+                className="w-full text-left bg-gray-50 hover:bg-gray-100 border-gray-200 p-4"
+              >
+                <div className="font-medium text-gray-900">{pain}</div>
+              </SelectionButton>
             ))}
           </div>
 
